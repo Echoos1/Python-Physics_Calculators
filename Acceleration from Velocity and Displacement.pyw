@@ -55,12 +55,20 @@ def calculate(*args):
     if Velocity_test:
         # Calculations
         acc = ((Vf ** 2) - (Vi ** 2)) / (2 * Dx)
+        time = ((-1 * Vi) + math.sqrt((Vi ** 2) - (4 * (.5 * acc) * (-1 * Dx)))) / (2 * (.5 * acc))
 
         rr = int(rr)
         result_label_main = Label(result_frame, justify=CENTER,
-                                  text=f'If an object changed velocities from {round(Vi, rr)}m/s to {round(Vf, rr)}m/s'
+                                  text=f'If an object changed velocities from {round(Vi, rr)}m/s \nto {round(Vf, rr)}m/s'
                                        f' in {round(Dx, rr)}m:\n\n'
-                                       f'Acceleration: {acc}')
+                                       f'Acceleration: {round(acc, rr)}m/s² for {round(time, rr)}s')
+
+        print(f'Vi: {Vi}')
+        print(f'Vf: {Vf}')
+        print(f'Dx: {Dx}')
+        print(f'rr: {rr}')
+        print(f'acc: {acc}')
+        print(f'time: {time}\n')
     else:
         result_label_main = Label(result_frame, justify=CENTER,
                                   text="Inputs MUST be numbers\n\n", fg="red")
@@ -70,9 +78,10 @@ def calculate(*args):
     # print(root.winfo_height())
 
 
+
 root = Tk()
 root.title("Physics: Acceleration from Velocity and Displacement")
-root.geometry("476x186")
+#root.geometry("416x156")
 root.resizable(0, 0)
 
 
