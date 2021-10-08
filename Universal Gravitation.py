@@ -41,130 +41,262 @@ class LibraryMenu(Frame):
     def __init__(self, root):
         Frame.__init__(self, root)
 
+        sunmass = ["1.989", "30"]
+        mercurymass = ["3.30", "23"]
+        venusmass = ["4.87", "24"]
+        earthmass = ["5.97", "24"]
+        marsmass = ["6.42", "23"]
+        jupitermass = ["1.898", "27"]
+        saturnmass = ["5.68", "26"]
+        uranusmass = ["8.68", "25"]
+        neptunemass = ["1.02", "26"]
+        plutomass = ["1.46", "22"]
+
+        sunrad = ["6.96347055", "8"]
+        mercuryrad = ["2.44", "6", "5.79", "10"]
+        venusrad = ["6.052", "6", "1.082", "11"]
+        earthrad = ["1.276", "7", "1.496", "11"]
+        marsrad = ["3.396", "6", "2.279", "11"]
+        jupiterrad = ["1.43", "8", "7.786", "11"]
+        saturnrad = ["1.205", "8", "1.434", "12"]
+        uranusrad = ["5.112", "7", "2.873", "12"]
+        neptunerad = ["4.953", "7", "4.495", "12"]
+        plutorad = ["1.185", "6", "5.906", "12"]
+
+        # Planetary Info from https://nssdc.gsfc.nasa.gov/planetary/factsheet/
+
         def sunreplace(i):
             if i == 0:
                 mass1_input.delete(0, len(mass1_var.get()))
                 mass1SN_input.delete(0, len(mass1SN_var.get()))
-                mass1_input.insert(0, "1.989")
-                mass1SN_input.insert(0, "30")
+                mass1_input.insert(0, sunmass[0])
+                mass1SN_input.insert(0, sunmass[1])
             elif i == 1:
                 mass2_input.delete(0, len(mass2_var.get()))
                 mass2SN_input.delete(0, len(mass2SN_var.get()))
-                mass2_input.insert(0, "1.989")
-                mass2SN_input.insert(0, "30")
+                mass2_input.insert(0, sunmass[0])
+                mass2SN_input.insert(0, sunmass[1])
             elif i == 2:
                 radius_input.delete(0, len(radius_var.get()))
                 radiusSN_input.delete(0, len(radiusSN_var.get()))
-                radius_input.insert(0, "6.96347055")
-                radiusSN_input.insert(0, "8")
+                radius_input.insert(0, sunrad[0])
+                radiusSN_input.insert(0, sunrad[1])
             else:
                 print("ERROR")
 
         def mercuryreplace(i):
             if i == 0:
-                print("Mass 1")
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, mercurymass[0])
+                mass1SN_input.insert(0, mercurymass[1])
             elif i == 1:
-                print("Mass 2")
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, mercurymass[0])
+                mass2SN_input.insert(0, mercurymass[1])
             elif i == 2:
-                print("Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, mercuryrad[0])
+                radiusSN_input.insert(0, mercuryrad[1])
             elif i == 3:
-                print("Orbital Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, mercuryrad[2])
+                radiusSN_input.insert(0, mercuryrad[3])
             else:
                 print("ERROR")
 
         def venusreplace(i):
             if i == 0:
-                print("Mass 1")
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, venusmass[0])
+                mass1SN_input.insert(0, venusmass[1])
             elif i == 1:
-                print("Mass 2")
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, venusmass[0])
+                mass2SN_input.insert(0, venusmass[1])
             elif i == 2:
-                print("Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, venusrad[0])
+                radiusSN_input.insert(0, venusrad[1])
             elif i == 3:
-                print("Orbital Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, venusrad[2])
+                radiusSN_input.insert(0, venusrad[3])
             else:
                 print("ERROR")
 
         def earthreplace(i):
             if i == 0:
-                print("Mass 1")
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, earthmass[0])
+                mass1SN_input.insert(0, earthmass[1])
             elif i == 1:
-                print("Mass 2")
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, earthmass[0])
+                mass2SN_input.insert(0, earthmass[1])
             elif i == 2:
-                print("Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, earthrad[0])
+                radiusSN_input.insert(0, earthrad[1])
             elif i == 3:
-                print("Orbital Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, earthrad[2])
+                radiusSN_input.insert(0, earthrad[3])
             else:
                 print("ERROR")
 
         def marsreplace(i):
             if i == 0:
-                print("Mass 1")
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, marsmass[0])
+                mass1SN_input.insert(0, marsmass[1])
             elif i == 1:
-                print("Mass 2")
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, marsmass[0])
+                mass2SN_input.insert(0, marsmass[1])
             elif i == 2:
-                print("Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, marsrad[0])
+                radiusSN_input.insert(0, marsrad[1])
             elif i == 3:
-                print("Orbital Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, marsrad[2])
+                radiusSN_input.insert(0, marsrad[3])
             else:
                 print("ERROR")
 
         def jupiterreplace(i):
             if i == 0:
-                print("Mass 1")
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, jupitermass[0])
+                mass1SN_input.insert(0, jupitermass[1])
             elif i == 1:
-                print("Mass 2")
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, jupitermass[0])
+                mass2SN_input.insert(0, jupitermass[1])
             elif i == 2:
-                print("Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, jupiterrad[0])
+                radiusSN_input.insert(0, jupiterrad[1])
             elif i == 3:
-                print("Orbital Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, jupiterrad[2])
+                radiusSN_input.insert(0, jupiterrad[3])
             else:
                 print("ERROR")
 
         def saturnreplace(i):
             if i == 0:
-                print("Mass 1")
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, saturnmass[0])
+                mass1SN_input.insert(0, saturnmass[1])
             elif i == 1:
-                print("Mass 2")
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, saturnmass[0])
+                mass2SN_input.insert(0, saturnmass[1])
             elif i == 2:
-                print("Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, saturnrad[0])
+                radiusSN_input.insert(0, saturnrad[1])
             elif i == 3:
-                print("Orbital Radius")
-            else:
-                print("ERROR")
-
-        def neptunereplace(i):
-            if i == 0:
-                print("Mass 1")
-            elif i == 1:
-                print("Mass 2")
-            elif i == 2:
-                print("Radius")
-            elif i == 3:
-                print("Orbital Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, saturnrad[2])
+                radiusSN_input.insert(0, saturnrad[3])
             else:
                 print("ERROR")
 
         def uranusreplace(i):
             if i == 0:
-                print("Mass 1")
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, uranusmass[0])
+                mass1SN_input.insert(0, uranusmass[1])
             elif i == 1:
-                print("Mass 2")
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, uranusmass[0])
+                mass2SN_input.insert(0, uranusmass[1])
             elif i == 2:
-                print("Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, uranusrad[0])
+                radiusSN_input.insert(0, uranusrad[1])
             elif i == 3:
-                print("Orbital Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, uranusrad[2])
+                radiusSN_input.insert(0, uranusrad[3])
+            else:
+                print("ERROR")
+
+        def neptunereplace(i):
+            if i == 0:
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, neptunemass[0])
+                mass1SN_input.insert(0, neptunemass[1])
+            elif i == 1:
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, neptunemass[0])
+                mass2SN_input.insert(0, neptunemass[1])
+            elif i == 2:
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, neptunerad[0])
+                radiusSN_input.insert(0, neptunerad[1])
+            elif i == 3:
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, neptunerad[2])
+                radiusSN_input.insert(0, neptunerad[3])
             else:
                 print("ERROR")
 
         def plutoreplace(i):
             if i == 0:
-                print("Mass 1")
+                mass1_input.delete(0, len(mass1_var.get()))
+                mass1SN_input.delete(0, len(mass1SN_var.get()))
+                mass1_input.insert(0, plutomass[0])
+                mass1SN_input.insert(0, plutomass[1])
             elif i == 1:
-                print("Mass 2")
+                mass2_input.delete(0, len(mass2_var.get()))
+                mass2SN_input.delete(0, len(mass2SN_var.get()))
+                mass2_input.insert(0, plutomass[0])
+                mass2SN_input.insert(0, plutomass[1])
             elif i == 2:
-                print("Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, plutorad[0])
+                radiusSN_input.insert(0, plutorad[1])
             elif i == 3:
-                print("Orbital Radius")
+                radius_input.delete(0, len(radius_var.get()))
+                radiusSN_input.delete(0, len(radiusSN_var.get()))
+                radius_input.insert(0, plutorad[2])
+                radiusSN_input.insert(0, plutorad[3])
             else:
                 print("ERROR")
 
@@ -185,10 +317,10 @@ class LibraryMenu(Frame):
         jupitermass_menu = Menu(self, tearoff=0)
         saturnstuff_menu = Menu(self, tearoff=0)
         saturnmass_menu = Menu(self, tearoff=0)
-        neptunestuff_menu = Menu(self, tearoff=0)
-        neptunemass_menu = Menu(self, tearoff=0)
         uranusstuff_menu = Menu(self, tearoff=0)
         uranusmass_menu = Menu(self, tearoff=0)
+        neptunestuff_menu = Menu(self, tearoff=0)
+        neptunemass_menu = Menu(self, tearoff=0)
         plutostuff_menu = Menu(self, tearoff=0)
         plutomass_menu = Menu(self, tearoff=0)
 
@@ -200,8 +332,8 @@ class LibraryMenu(Frame):
         lib_menu.add_cascade(label="Mars", menu=marsstuff_menu)
         lib_menu.add_cascade(label="Jupiter", menu=jupiterstuff_menu)
         lib_menu.add_cascade(label="Saturn", menu=saturnstuff_menu)
-        lib_menu.add_cascade(label="Neptune", menu=neptunestuff_menu)
         lib_menu.add_cascade(label="Uranus", menu=uranusstuff_menu)
+        lib_menu.add_cascade(label="Neptune", menu=neptunestuff_menu)
         lib_menu.add_cascade(label="Pluto", menu=plutostuff_menu)
 
         sunstuff_menu.add_cascade(label="Mass", menu=sunmass_menu)
@@ -245,17 +377,17 @@ class LibraryMenu(Frame):
         saturnstuff_menu.add_command(label="Radius", command=partial(saturnreplace, 2))
         saturnstuff_menu.add_cascade(label="Orbital Radius", command=partial(saturnreplace, 3))
 
-        neptunestuff_menu.add_cascade(label="Mass", menu=neptunemass_menu)
-        neptunemass_menu.add_command(label="Insert for Mass 1", command=partial(neptunereplace, 0))
-        neptunemass_menu.add_command(label="Insert for Mass 2", command=partial(neptunereplace, 1))
-        neptunestuff_menu.add_command(label="Radius", command=partial(neptunereplace, 2))
-        neptunestuff_menu.add_cascade(label="Orbital Radius", command=partial(neptunereplace, 3))
-
         uranusstuff_menu.add_cascade(label="Mass", menu=uranusmass_menu)
         uranusmass_menu.add_command(label="Insert for Mass 1", command=partial(uranusreplace, 0))
         uranusmass_menu.add_command(label="Insert for Mass 2", command=partial(uranusreplace, 1))
         uranusstuff_menu.add_command(label="Radius", command=partial(uranusreplace, 2))
         uranusstuff_menu.add_cascade(label="Orbital Radius", command=partial(uranusreplace, 3))
+
+        neptunestuff_menu.add_cascade(label="Mass", menu=neptunemass_menu)
+        neptunemass_menu.add_command(label="Insert for Mass 1", command=partial(neptunereplace, 0))
+        neptunemass_menu.add_command(label="Insert for Mass 2", command=partial(neptunereplace, 1))
+        neptunestuff_menu.add_command(label="Radius", command=partial(neptunereplace, 2))
+        neptunestuff_menu.add_cascade(label="Orbital Radius", command=partial(neptunereplace, 3))
 
         plutostuff_menu.add_cascade(label="Mass", menu=plutomass_menu)
         plutomass_menu.add_command(label="Insert for Mass 1", command=partial(plutoreplace, 0))
